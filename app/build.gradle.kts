@@ -39,11 +39,17 @@ android {
 }
 
 apollo {
+    val graphQLDir = "src/main/java/tech/dalapenko/pokemonpagingexample/core/network/graphql"
+    val graphQLSchemaPath = "$graphQLDir/schema.graphqls"
+
     service("service") {
         packageName.set("tech.dalapenko.pokemonpagingexample")
-        schemaFile.set(file("src/main/java/tech/dalapenko/pokemonpagingexample/core/network/graphql/schema.json"))
-        srcDir(file("src/main/java/tech/dalapenko/pokemonpagingexample/core/network/graphql"))
-        generateApolloMetadata.set(true)
+        schemaFile.set(file(graphQLSchemaPath))
+        introspection {
+            endpointUrl.set("https://beta.pokeapi.co/graphql/v1beta")
+            schemaFile.set(file(graphQLSchemaPath))
+        }
+        srcDir(file(graphQLDir))
     }
 }
 

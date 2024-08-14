@@ -1,13 +1,13 @@
-query Pokemon_v2_pokemon {
-    pokemon_v2_pokemon(limit: null, offset: null) {
-        height
-        id
-        name
-        weight
-        pokemon_v2_pokemonsprites {
-            id
-            pokemon_id
-            sprites
-        }
-    }
-}
+#query getPokemonQuery($limit: Int!, $offset: Int, $limitTracks: Int!) {
+#    pokemon_v2_pokemon(limit: null, offset: null) {
+#        height
+#        id
+#        name
+#        weight
+#        pokemon_v2_pokemonsprites {
+#            id
+#            pokemon_id
+#            sprites
+#        }
+#    }
+#}

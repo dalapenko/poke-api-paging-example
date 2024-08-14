@@ -7,3 +7,9 @@ plugins {
     alias(libs.plugins.serialization) apply false
     alias(libs.plugins.apollo) apply false
 }
+
+buildscript {
+    dependencies {
+        classpath(libs.bundles.project.classpath)
+    }
+}
