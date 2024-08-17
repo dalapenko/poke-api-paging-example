@@ -2,7 +2,6 @@ package tech.dalapenko.pokeapipagingexample.core.database.dbo
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.Index
 import tech.dalapenko.pokeapipagingexample.core.database.Table
 
