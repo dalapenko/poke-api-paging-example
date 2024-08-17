@@ -53,9 +53,16 @@ app-implementation = [
     "androidx-fragmentktx",
     "android-material",
     "hilt-core",
-    "apollo-runtime"
+    "apollo-runtime",
+    "androidx-room-paging",
+    "androidx-room-ktx",
+    "androidx-room-runtime",
+    "androidx-paging-runtime",
+    "glide-core"
 ]
 
 app-kapt = [
-    "hilt-compiler"
+    "hilt-compiler",
+    "androidx-room-compiler",
+    "glide-compiler"
 ]

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pokemon-paging-example"
+rootProject.name = "poke-api-paging-example"
 include(":app")
  

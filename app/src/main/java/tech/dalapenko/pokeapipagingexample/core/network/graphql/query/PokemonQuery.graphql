@@ -1,0 +1,12 @@
+query getPokemonQuery($limit: Int!, $offset: Int!) {
+    pokemonDto: pokemon_v2_pokemon(limit: $limit, offset: $offset) {
+        id
+        name
+        weight
+        height
+        pokemonSpriteDto: pokemon_v2_pokemonsprites(limit: 1) {
+            id
+            spriteUrl: sprites(path: "$.other.home.front_default")
+        }
+    }
+}

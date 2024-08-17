@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">PokemonPagingExample</string>
+    <string name="app_name">PokemonApiPagingExample</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="weight_title">weight: %1$d</string>
+    <string name="height_title">height: %1$d</string>
 </resources>

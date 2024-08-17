@@ -7,17 +7,21 @@ plugins {
 }
 
 android {
-    namespace = "tech.dalapenko.pokemonpagingexample"
+    namespace = "tech.dalapenko.pokeapipagingexample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "tech.dalapenko.pokemonpagingexample"
+        applicationId = "tech.dalapenko.pokeapipagingexample"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -39,16 +43,12 @@ android {
 }
 
 apollo {
-    val graphQLDir = "src/main/java/tech/dalapenko/pokemonpagingexample/core/network/graphql"
+    val graphQLDir = "src/main/java/tech/dalapenko/pokeapipagingexample/core/network/graphql"
     val graphQLSchemaPath = "$graphQLDir/schema.graphqls"
 
     service("service") {
-        packageName.set("tech.dalapenko.pokemonpagingexample")
+        packageName.set("tech.dalapenko.pokeapipagingexample")
         schemaFile.set(file(graphQLSchemaPath))
-        introspection {
-            endpointUrl.set("https://beta.pokeapi.co/graphql/v1beta")
-            schemaFile.set(file(graphQLSchemaPath))
-        }
         srcDir(file(graphQLDir))
     }
 }
